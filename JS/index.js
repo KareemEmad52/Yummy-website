@@ -16,8 +16,11 @@ async function getAllMeals() {
 }
 
 (async function () {
+    
   let meals = await getAllMeals();
   displayMeals(meals);
+  $("#loadingPage").fadeOut(500)
+  $("body").css("overflow", "auto");
 })();
 
 // ^==============> Functions
@@ -700,10 +703,10 @@ $("#close-icon").click(() => {
   $("#close-icon").css("display", "none");
 });
 
-$(document).ready(() => {
-  $("#loadingPage").fadeOut(500,()=>{
-    $("body").css("overflow", "auto");
-  });
-//   $("#loadingPage").remove();
+// $(document).ready(() => {
+//   $("#loadingPage").fadeOut(500,()=>{
+//     $("body").css("overflow", "auto");
+//   });
+// //   $("#loadingPage").remove();
   
-});
+// });
