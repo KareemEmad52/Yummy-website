@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <!-- ^===== Favicon ===== -->
+    <link rel="icon" href="./Images/logo (1).png" />
+    <!-- ^===== Font Awesome Icon Library ===== -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- ^===== Bootstrap Framework ===== -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!-- ^===== Animate.CSS Library ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- ^===== Main Style sheet ===== -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+
+
+        <!-- ! ========== SideBar ========== -->
+        <nav class="text-white sideBar d-flex position-fixed " id="sideBar">
+            <div class="inner-layer inner-layer-sidebar bg-black d-flex flex-column justify-content-between">
+                <ul class="list-unstyled p-0 overflow-hidden sideBarList">
+                    <li  onclick="showSearchInput()" class="py-2 position-relative ">Search</li>
+                    <li  onclick="showCategory()" class="py-2 position-relative ">Categories</li>
+                    <li  onclick="showArea()" class="py-2 position-relative">Area</li>
+                    <li  onclick="showIngredients()" class="py-2 position-relative">Ingredients</li>
+                    <li  onclick="showInputs()" class="py-2 position-relative">Contact Us</li>
+                </ul>
+    
+    
+                <div class="caption  p-0">
+                    <div class="icon-contanier">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <p>Copyright Â© 2019 All Rights Reserved</p>
+                </div>
+            </div>
+    
+            <div class="outer-layer d-flex flex-column justify-content-between bg-white text-black px-1 align-items-center py-4">
+                <img src="Images/logo (1).png" class="nav-logo" alt="">
+                <div class="click-icon  ">
+                    <i class="fa-solid fa-bars " id="open-close-icon"></i>
+                    <i class="fa-solid fa-xmark  " id="close-icon"></i>
+                </div>
+                <div class="icon-container2 d-flex flex-column mb-3">
+                    <i class="fa-solid fa-globe"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+            </div>
+        </nav>
+
+    <!-- ! ========== Lousding Page  ========== -->
+    <div id="loadingPage" class="loading1">
+        <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+        </div>
+    </div>
+
+
+    <div id="loadingPage2" class="loading ">
+        <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+        </div>
+    </div>
+
+
+
+
+    <!-- ! ========== Home ========== -->
+    <section  id="home">
+
+    </section>
+    <section>
+        <div class="container" id="inputsCont">
+            <div class="row py-5 g-4" id="homeSection">
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--^   JS Link   -->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* ^ =================  Global Rules ================= */
+body{
+    background-color: black;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.loading1{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11212;
+    /* display: none; */
+}
+.loading{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+}
+.loading i , .loading1 i{
+    font-size: 80px;
+    color: white;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+
+    background-color: #303437;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #c1b4be;
+    border-radius: 2px;
+}
+/* ^ =================  SideBar ================= */
+.sideBar{
+    /* width: 20%; */
+    transition: left 0.5s;
+    z-index: 11116;
+    top: 0;
+    bottom: 0;
+}
+.inner-layer-sidebar{
+    width: 260px;
+    padding: 25px;
+}
+.icon-contanier i{
+    cursor: pointer;
+}
+.sideBarList li{
+    top: 50px;
+    cursor: pointer;
+}
+.nav-logo{
+    width: 50px;
+}
+#open-close-icon{
+    font-size: 30px;
+    cursor: pointer;
+}
+#close-icon{
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+}
+.icon-container2 i{
+    font-size: 18px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+/* ^ =================  Home Section  ================= */
+.img-overlay{
+    transition: top 0.5s;
+    background-color: #f9f6f6ca;
+}
+.inner-layer{
+    cursor: pointer;
+}
+.inner-layer:hover .img-overlay{
+    top: 0 !important;
+}
+.img-overlay p{
+    text-align: center;
+}
+#home{
+    display: none;
+}
+
+/* ^ =================  Search Section  ================= */
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.form-control:focus{
+    background-color: transparent;
+    color: white;
+}
+.form-control::placeholder{
+    color: #acacac;
+}
+
+.inner-layer2{
+    cursor: pointer;
+}
+.inner-layer2 i{
+    font-size: 70px;
+}
+.inner-layer2 h3{
+    font-size: 35px;
+}
+
+.form2{
+    background-color: #fff !important;
+    color: black !important;
+}
+
+
+@media screen and (max-width: 640px){
+    .searchName{
+        width: 60%;
+        margin: auto;
+    }
+}
