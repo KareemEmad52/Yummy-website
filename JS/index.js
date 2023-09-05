@@ -68,7 +68,7 @@ async function MealDetails(id) {
 function displaySingleMeal(meal) {
   $('#home').css('display','none')
   clearHome();
-  console.log(meal);
+  
   let box = `
     <div class="col-md-4 text-white">
     <img src="${meal[0].strMealThumb}" class="w-100 rounded-3" alt="">
@@ -102,59 +102,22 @@ function displaySingleMeal(meal) {
     $("#homeSection").html(box);
 
 
-    let Recipes = '';
-    let measure = []
-    let RecipesList =[]
-    RecipesList.push(meal[0].strIngredient1)
-    RecipesList.push(meal[0].strIngredient2)
-    RecipesList.push(meal[0].strIngredient3)
-    RecipesList.push(meal[0].strIngredient4)
-    RecipesList.push(meal[0].strIngredient5)
-    RecipesList.push(meal[0].strIngredient6)
-    RecipesList.push(meal[0].strIngredient7)
-    RecipesList.push(meal[0].strIngredient8)
-    RecipesList.push(meal[0].strIngredient9)
-    RecipesList.push(meal[0].strIngredient10)
-    RecipesList.push(meal[0].strIngredient11)
-    RecipesList.push(meal[0].strIngredient12)
-    RecipesList.push(meal[0].strIngredient13)
-    RecipesList.push(meal[0].strIngredient14)
-    RecipesList.push(meal[0].strIngredient15)
-    RecipesList.push(meal[0].strIngredient16)
-    RecipesList.push(meal[0].strIngredient17)
-    RecipesList.push(meal[0].strIngredient18)
-    RecipesList.push(meal[0].strIngredient19)
-    RecipesList.push(meal[0].strIngredient20)
-    measure.push(meal[0].strMeasure1)
-    measure.push(meal[0].strMeasure2)
-    measure.push(meal[0].strMeasure3)
-    measure.push(meal[0].strMeasure4)
-    measure.push(meal[0].strMeasure5)
-    measure.push(meal[0].strMeasure6)
-    measure.push(meal[0].strMeasure7)
-    measure.push(meal[0].strMeasure8)
-    measure.push(meal[0].strMeasure9)
-    measure.push(meal[0].strMeasure10)
-    measure.push(meal[0].strMeasure11)
-    measure.push(meal[0].strMeasure12)
-    measure.push(meal[0].strMeasure13)
-    measure.push(meal[0].strMeasure14)
-    measure.push(meal[0].strMeasure15)
-    measure.push(meal[0].strMeasure16)
-    measure.push(meal[0].strMeasure17)
-    measure.push(meal[0].strMeasure18)
-    measure.push(meal[0].strMeasure19)
-    measure.push(meal[0].strMeasur20)
-    for(let i = 0 ; i <20 ;i++){
-        
-        if(RecipesList[i] != null && RecipesList[i] != ''){
-            Recipes += `
-            <li class="alert alert-info m-2 p-1">${measure[i]} ${RecipesList[i]}</li>
-        `;
-        }
     
+
+
+
+    let Recipes = '';
+  let x = meal[0]
+  for(let i = 0 ; i < 20 ; i++){
+    if(x[`strIngredient${i}`] && x[`strMeasure${i}`]){
+        Recipes += `
+        <li class="alert alert-info m-2 p-1">${x[`strMeasure${i}`]} ${x[`strIngredient${i}`]}</li>
+        `
     }
-    $('#Recipes').html(Recipes)
+  }
+
+  $('#Recipes').html(Recipes)
+    
 
 
     if(meal[0].strTags != null){
